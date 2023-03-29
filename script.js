@@ -7,7 +7,7 @@ const starWarsShows = ["The Mandalorian", "The Book of Boba Fett"];
 
 // 1c.
 const disneyPlusShows = [...mcuShows, ...starWarsShows, "The Beatles: Get Back"];
-
+ 
 // 1d.
 console.log(disneyPlusShows);
 
@@ -20,14 +20,14 @@ const netflixMovies = {
 // 2b.
 const amazonPrimeMovies = {
     action: 'The Tomorrow War',
-    drama: 'One Night in Miami'
+    drama: 'One Night in Miami',
 };
 
 // 2c.
 const streamingMovies = {
-    ...netflixMovies,
     ...amazonPrimeMovies,
-    musical: 'Hamilton'
+    ...netflixMovies,
+    musical: 'Hamilton',
 };
 
 // 2d.
@@ -52,17 +52,19 @@ const avengers = {
 const {warMachine, theHulk} = avengers;
 
 // 4c.
-// console.log(warMachine,theHulk);
+console.log(warMachine,theHulk);
 
 // 4d.
 const moreAvengers = {
     blackWidow: 'Natasha Romanof',
     hawkeye: 'Clint Barton',
-    ironMan: 'Tony Stark'
+    ironMan: 'Tony Stark',
 };
 
-// 4e.
-const {nat, ...others} = moreAvengers;
+// 4e.  Corrected to reference the blackWidow key.
+const {
+    blackWidow: nat, 
+    ...others} = moreAvengers;
 
 // 4f.
 console.log(moreAvengers);
